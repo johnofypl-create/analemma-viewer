@@ -51,8 +51,8 @@ body::before {
 /* ── Header ── */
 .header {
     background: var(--panel);
-    padding: 0 24px;
-    height: 52px;
+    padding: 0 20px;
+    height: 26px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,40 +73,41 @@ body::before {
 }
 
 .header h1 {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--gold);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
 .header h1 .icon-sun {
     display: inline-flex;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #ffd76e, var(--gold));
-    box-shadow: 0 0 14px var(--gold-glow), 0 0 4px var(--gold);
+    align-items: center;
+    filter: drop-shadow(0 0 6px var(--gold-glow));
     animation: iconPulse 3s ease-in-out infinite;
 }
 
+.header h1 .icon-sun svg {
+    display: block;
+}
+
 @keyframes iconPulse {
-    0%, 100% { box-shadow: 0 0 10px var(--gold-glow), 0 0 3px var(--gold); }
-    50% { box-shadow: 0 0 20px rgba(240, 192, 64, 0.35), 0 0 6px var(--gold); }
+    0%, 100% { filter: drop-shadow(0 0 4px var(--gold-glow)); }
+    50% { filter: drop-shadow(0 0 8px rgba(240, 192, 64, 0.35)); }
 }
 
 .header .about-btn {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--muted);
-    padding: 6px 16px;
-    border-radius: 4px;
+    padding: 2px 12px;
+    border-radius: 3px;
     cursor: pointer;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
