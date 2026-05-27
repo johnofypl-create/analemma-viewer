@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日行迹可视化器 (Analemma Viewer)</title>
+    
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    
+    <!-- SunCalc -->
+    <script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.min.js"></script>
+    
+    <!-- D3.js & TopoJSON -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><span class="icon-sun"></span>日行迹可视化器</h1>
+            <button class="about-btn" onclick="showAbout()">关于</button>
+        </header>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="globe-container">
+                    <canvas id="globeCanvas"></canvas>
+                    <div class="globe-hint">拖拽旋转 · 滚轮缩放 · 点击选点</div>
+                    <div class="globe-overlay">
+                        <div class="coords-display">
+                            <div class="coord-card">
+                                <span class="label">纬度</span>
+                                <span class="value" id="latValue">39.9042° N</span>
+                            </div>
+                            <div class="coord-card">
+                                <span class="label">经度</span>
+                                <span class="value" id="lngValue">116.4074° E</span>
+                            </div>
+                        </div>
+                        
+                        <div class="time-control">
+                            <div class="control-label">
+                                <span>时刻选择 (UTC时间)</span>
+                                <span class="label-val" id="timeLabelVal">12:00 UTC</span>
+                            </div>
+                            <div class="slider-input-row">
+                                <input type="range" class="time-slider" id="timeSlider" min="0" max="1439" value="720">
+                                <input type="text" class="time-input" id="timeInput" value="12:00">
+                            </div>
+                        </div>
+                        
+                        <div class="date-control">
+                            <div class="control-label">
+                                <span>日期选择</span>
+                                <span class="label-val" id="dateLabelVal">1月1日</span>
+                            </div>
+                            <div class="slider-input-row">
+                                <input type="range" class="date-slider" id="dateSlider" min="0" max="365">
+                                <span class="date-label-display" id="dateLabel">1月1日</span>
+                            </div>
+                        </div>
+                        
+                        <div class="year-control">
+                            <div class="control-label">
+                                <span>年份选择</span>
+                                <span class="label-val" id="yearLabelVal">2024年</span>
+                            </div>
+                            <div class="slider-input-row">
+                                <input type="range" class="year-slider" id="yearSlider" min="-10000" max="10000" value="2024">
+                                <span class="year-label-display" id="yearLabel">2024</span>
+                            </div>
+                        </div>
+                        <div class="mode-row">
+                            <span>算法</span>
+                            <span class="mode-val" id="calcModeIndicator">VSOP87</span>
+                        </div>
+                        
+                        <div class="tz-row">
+                            <span>时区</span>
+                            <span class="tz-val" id="timezoneDisplay">UTC+8</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="sky-view-container">
+                    <canvas id="skyCanvas"></canvas>
+                    <div class="tooltip" id="tooltip">
+                        <div class="date" id="tooltipDate"></div>
+                        <div class="detail" id="tooltipAlt"></div>
+                        <div class="detail" id="tooltipAz"></div>
+                    </div>
+                </div>
+                
+                <div class="stats-bar">
+                    <div class="stat">
+                        <span class="stat-label">年份:</span>
+                        <span class="stat-value" id="currentYear">2024</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">夏至高度角:</span>
+                        <span class="stat-value" id="summerSolstice">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">冬至高度角:</span>
+                        <span class="stat-value" id="winterSolstice">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">地平线以下:</span>
+                        <span class="stat-value" id="belowHorizon">-- 天</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">选中日期:</span>
+                        <span class="stat-value" id="selectedDate">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">当地时间:</span>
+                        <span class="stat-value" id="localTime">--</span>
+                    </div>
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-dot spring"></div>
+                        <span>春季</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot summer"></div>
+                        <span>夏季</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot autumn"></div>
+                        <span>秋季</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot winter"></div>
+                        <span>冬季</span>
+                    </div>
+                </div>
+                
+                <div class="footer-hint">
+                    提示: 点击地球选择地点，调整时刻滑块查看不同时间的日行迹。年份范围 -10000 至 +10000，使用 VSOP87 长期轨道理论
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="aboutModal">
+        <div class="modal-content">
+            <h2>关于日行迹 (Analemma)</h2>
+            <p>
+                <strong>日行迹</strong>是指在固定地点、每天同一时刻拍摄太阳位置，将一年中所有照片叠加后，太阳在天空中呈现的"8"字形轨迹。
+            </p>
+            <p>
+                这个轨迹是由地球公转轨道的<strong>椭圆性</strong>和地轴的<strong>23.5°倾斜</strong>共同造成的。不同纬度看到的日行迹形状不同：在赤道附近它是一条直线，在两极则是一个圆。
+            </p>
+            <p>
+                <strong>使用方法：</strong><br>
+                1. 在左侧地球仪上拖拽旋转、滚轮缩放，点击选择观察地点<br>
+                2. 调整时间滑块选择一天中的时刻<br>
+                3. 右侧将显示该地点在该时刻的日行迹轨迹
+            </p>
+            <p>
+                <strong>技术说明：</strong><br>
+                太阳位置计算使用 SunCalc.js 库。3D 地球使用 Three.js 自绘渲染。
+            </p>
+            <button class="modal-close" onclick="hideAbout()">关闭</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
