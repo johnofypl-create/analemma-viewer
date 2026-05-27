@@ -194,6 +194,25 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.coord-card:hover {
+    border-color: var(--border-glow);
+}
+
+.coord-card.scroll-mode {
+    border-color: var(--azure);
+    box-shadow: 0 0 12px rgba(78, 168, 246, 0.25), inset 0 0 12px rgba(78, 168, 246, 0.06);
+}
+
+.coord-card.input-mode {
+    border-color: var(--gold);
+    box-shadow: 0 0 12px rgba(240, 192, 64, 0.2);
 }
 
 .coord-card .label {
@@ -210,6 +229,105 @@ body::before {
     font-weight: 400;
     color: var(--azure);
     letter-spacing: 0.02em;
+}
+
+/* ── Value Container (span + input) ── */
+.value-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.coord-input {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--azure);
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: right;
+    outline: none;
+    width: 140px;
+    padding: 0;
+    caret-color: var(--gold);
+}
+
+.coord-input::selection {
+    background: rgba(240, 192, 64, 0.25);
+}
+
+.coord-input.error {
+    color: var(--rose);
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+.coord-card.input-mode .value { display: none; }
+.coord-card.input-mode .coord-input { display: block; }
+
+/* ── Adjacent Values (iPhone Alarm Style) ── */
+.adj-val {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 2px 14px;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--azure);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.adj-val.adj-above-1 {
+    bottom: calc(100% + 6px);
+    opacity: 0;
+    transform: translateY(4px);
+}
+.adj-val.adj-above-2 {
+    bottom: calc(100% + 28px);
+    opacity: 0;
+    transform: translateY(6px);
+}
+.adj-val.adj-below-1 {
+    top: calc(100% + 6px);
+    opacity: 0;
+    transform: translateY(-4px);
+}
+.adj-val.adj-below-2 {
+    top: calc(100% + 28px);
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.coord-card.scroll-mode .adj-val.adj-above-1,
+.coord-card.scroll-mode .adj-val.adj-below-1 {
+    opacity: 0.25;
+    transform: translateY(0);
+}
+.coord-card.scroll-mode .adj-val.adj-above-2,
+.coord-card.scroll-mode .adj-val.adj-below-2 {
+    opacity: 0.08;
+    transform: translateY(0);
+}
+
+/* ── Mobile Scroll Feedback ── */
+.coord-card.scroll-stepping {
+    transition: none;
+}
+
+.coord-card.scroll-stepping .value {
+    color: var(--text-bright);
 }
 
 .time-control { margin-bottom: 12px; }
@@ -653,6 +771,7 @@ input[type="range"].year-slider::-moz-range-thumb {
 
     .coord-card {
         padding: 4px 8px;
+        overflow: visible;
     }
 
     .coord-card .label {
@@ -661,6 +780,16 @@ input[type="range"].year-slider::-moz-range-thumb {
 
     .coord-card .value {
         font-size: 11px;
+    }
+
+    .coord-input {
+        font-size: 11px;
+        width: 110px;
+    }
+
+    .adj-val {
+        font-size: 10px;
+        padding: 2px 8px;
     }
 
     /* ── Mobile Controls - Tight Spacing ── */

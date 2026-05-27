@@ -3,6 +3,7 @@ import { updateSunLight } from './core/sun.js';
 import { generateAnalemma } from './data/analemma.js';
 import { initTimeControl, initDateControl, initYearControl, updateCoordsDisplay } from './ui/controls.js';
 import { initHoverInteraction } from './ui/tooltip.js';
+import { initCoordInput } from './ui/coord-input.js';
 import { state } from './config.js';
 
 // ==================== 模态框 ====================
@@ -32,6 +33,7 @@ async function init() {
     initDateControl();
     await initYearControl();
     initHoverInteraction();
+    initCoordInput();
     updateCoordsDisplay();
 
     window.addEventListener('resize', handleResize);

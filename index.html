@@ -31,13 +31,19 @@
                     <div class="globe-hint">拖拽旋转 · 滚轮缩放 · 点击选点</div>
                     <div class="globe-overlay">
                         <div class="coords-display">
-                            <div class="coord-card">
+                            <div class="coord-card" id="latCard">
                                 <span class="label">纬度</span>
-                                <span class="value" id="latValue">39.9042° N</span>
+                                <div class="value-container">
+                                    <span class="value" id="latValue">39.9042° N</span>
+                                    <input class="coord-input" id="latInput" maxlength="12" />
+                                </div>
                             </div>
-                            <div class="coord-card">
+                            <div class="coord-card" id="lngCard">
                                 <span class="label">经度</span>
-                                <span class="value" id="lngValue">116.4074° E</span>
+                                <div class="value-container">
+                                    <span class="value" id="lngValue">116.4074° E</span>
+                                    <input class="coord-input" id="lngInput" maxlength="13" />
+                                </div>
                             </div>
                         </div>
                         
