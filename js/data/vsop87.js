@@ -173,7 +173,7 @@ export function calculateSunFromParams(params, dayOfYear, timeMinutes, lat, lng)
 
     return {
         altitude: altitude * 180 / Math.PI,
-        azimuth: ((azimuth * 180 / Math.PI) + 180) % 360
+        azimuth: (azimuth * 180 / Math.PI + 360) % 360
     };
 }
 
