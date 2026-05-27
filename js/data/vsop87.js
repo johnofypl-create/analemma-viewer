@@ -110,11 +110,15 @@ export function calculateSunFromParams(params, dayOfYear, timeMinutes, lat, lng)
     const { obliquity, eccentricity, perihelion } = params;
     const epsRad = obliquity * Math.PI / 180;
 
-    // 一年中的角度 (0 - 2π)
-    const dayAngle = (dayOfYear / 365.25) * 2 * Math.PI;
+    // 春分点近似偏移 (第80天)
+    const vernalEquinoxDay = 80;
+    const daysInYear = 365.25;
+
+    // 太阳平黄经 (从春分点起算)
+    const meanLongitude = ((dayOfYear - vernalEquinoxDay) / daysInYear) * 2 * Math.PI;
 
     // 平近点角
-    const M = dayAngle - (perihelion * Math.PI / 180);
+    const M = meanLongitude - (perihelion * Math.PI / 180);
 
     // 开普勒方程求解偏近点角
     let E = M;
@@ -137,8 +141,11 @@ export function calculateSunFromParams(params, dayOfYear, timeMinutes, lat, lng)
     // 太阳赤经
     const alpha = Math.atan2(Math.cos(epsRad) * Math.sin(lambda), Math.cos(lambda));
 
-    // 格林尼治恒星时 (GMST) at 0h UT
-    const daysSinceJ2000 = (params.year - 2000) * 365.25 + dayOfYear;
+    // 格林尼治恒星时 (GMST) — 使用 JavaScript Date 获取精确儒略日
+    const msPerDay = 86400000;
+    const jd = new Date(Date.UTC(params.year, 0, dayOfYear + 1)).getTime() / msPerDay + 2440587.5;
+    const daysSinceJ2000 = jd - 2451545.0;
+
     let GMST0 = (280.46061837 + 360.98564736629 * daysSinceJ2000) % 360;
     if (GMST0 < 0) GMST0 += 360;
 
