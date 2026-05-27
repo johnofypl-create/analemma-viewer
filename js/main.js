@@ -45,7 +45,7 @@ async function init() {
 
     setTimeout(() => {
         handleGlobeResize();
-        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
         generateAnalemma();
     }, 200);
 }

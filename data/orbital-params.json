@@ -4,366 +4,366 @@
     "endYear": 100000,
     "step": 2000,
     "totalPoints": 101,
-    "generatedAt": "2026-05-27T19:27:06.014Z",
+    "generatedAt": "2026-05-27T20:23:12.977Z",
     "description": "VSOP87-based orbital parameters for long-term analemma visualization"
   },
   "data": [
     {
       "year": -100000,
-      "obliquity": 24.229575,
-      "eccentricity": 0.01968018,
-      "perihelion": 292.33827,
-      "precession": -139.311329
+      "obliquity": 24.229581,
+      "eccentricity": 0.01968014,
+      "perihelion": 292.341675,
+      "precession": -139.308533
     },
     {
       "year": -98000,
-      "obliquity": 24.234458,
-      "eccentricity": 0.01964729,
-      "perihelion": 295.59135,
-      "precession": -136.640253
+      "obliquity": 24.234462,
+      "eccentricity": 0.01964725,
+      "perihelion": 295.594692,
+      "precession": -136.63751
     },
     {
       "year": -96000,
-      "obliquity": 24.238131,
-      "eccentricity": 0.01961339,
-      "perihelion": 298.84811,
-      "precession": -133.966774
+      "obliquity": 24.238134,
+      "eccentricity": 0.01961335,
+      "perihelion": 298.851389,
+      "precession": -133.964083
     },
     {
       "year": -94000,
-      "obliquity": 24.240618,
-      "eccentricity": 0.01957847,
-      "perihelion": 302.10855,
-      "precession": -131.290891
+      "obliquity": 24.24062,
+      "eccentricity": 0.01957843,
+      "perihelion": 302.111765,
+      "precession": -131.288252
     },
     {
       "year": -92000,
-      "obliquity": 24.241943,
-      "eccentricity": 0.01954254,
-      "perihelion": 305.37267,
-      "precession": -128.612602
+      "obliquity": 24.241944,
+      "eccentricity": 0.0195425,
+      "perihelion": 305.375822,
+      "precession": -128.610016
     },
     {
       "year": -90000,
       "obliquity": 24.242131,
-      "eccentricity": 0.01950559,
-      "perihelion": 308.64047,
-      "precession": -125.931907
+      "eccentricity": 0.01950556,
+      "perihelion": 308.643558,
+      "precession": -125.929374
     },
     {
       "year": -88000,
-      "obliquity": 24.241206,
-      "eccentricity": 0.01946764,
-      "perihelion": 311.91195,
-      "precession": -123.248804
+      "obliquity": 24.241205,
+      "eccentricity": 0.0194676,
+      "perihelion": 311.914975,
+      "precession": -123.246323
     },
     {
       "year": -86000,
-      "obliquity": 24.239192,
-      "eccentricity": 0.01942867,
-      "perihelion": 315.18711,
-      "precession": -120.563292
+      "obliquity": 24.239189,
+      "eccentricity": 0.01942863,
+      "perihelion": 315.190071,
+      "precession": -120.560864
     },
     {
       "year": -84000,
-      "obliquity": 24.236112,
-      "eccentricity": 0.01938868,
-      "perihelion": 318.46595,
-      "precession": -117.87537
+      "obliquity": 24.236109,
+      "eccentricity": 0.01938865,
+      "perihelion": 318.468847,
+      "precession": -117.872996
     },
     {
       "year": -82000,
-      "obliquity": 24.231992,
-      "eccentricity": 0.01934768,
-      "perihelion": 321.74847,
-      "precession": -115.185038
+      "obliquity": 24.231988,
+      "eccentricity": 0.01934765,
+      "perihelion": 321.751303,
+      "precession": -115.182716
     },
     {
       "year": -80000,
-      "obliquity": 24.226856,
-      "eccentricity": 0.01930567,
-      "perihelion": 325.03467,
-      "precession": -112.492293
+      "obliquity": 24.226851,
+      "eccentricity": 0.01930563,
+      "perihelion": 325.037438,
+      "precession": -112.490025
     },
     {
       "year": -78000,
-      "obliquity": 24.220727,
-      "eccentricity": 0.01926265,
-      "perihelion": 328.32455,
-      "precession": -109.797136
+      "obliquity": 24.220721,
+      "eccentricity": 0.01926261,
+      "perihelion": 328.327254,
+      "precession": -109.794921
     },
     {
       "year": -76000,
-      "obliquity": 24.213629,
-      "eccentricity": 0.01921861,
-      "perihelion": 331.61811,
-      "precession": -107.099564
+      "obliquity": 24.213623,
+      "eccentricity": 0.01921857,
+      "perihelion": 331.620749,
+      "precession": -107.097403
     },
     {
       "year": -74000,
-      "obliquity": 24.205588,
-      "eccentricity": 0.01917355,
-      "perihelion": 334.91535,
-      "precession": -104.399578
+      "obliquity": 24.205581,
+      "eccentricity": 0.01917352,
+      "perihelion": 334.917924,
+      "precession": -104.39747
     },
     {
       "year": -72000,
-      "obliquity": 24.196627,
-      "eccentricity": 0.01912749,
-      "perihelion": 338.21627,
-      "precession": -101.697175
+      "obliquity": 24.19662,
+      "eccentricity": 0.01912745,
+      "perihelion": 338.218779,
+      "precession": -101.695121
     },
     {
       "year": -70000,
-      "obliquity": 24.18677,
-      "eccentricity": 0.01908041,
-      "perihelion": 341.52087,
-      "precession": -98.992355
+      "obliquity": 24.186762,
+      "eccentricity": 0.01908037,
+      "perihelion": 341.523314,
+      "precession": -98.990355
     },
     {
       "year": -68000,
-      "obliquity": 24.176041,
-      "eccentricity": 0.01903231,
-      "perihelion": 344.82915,
-      "precession": -96.285117
+      "obliquity": 24.176033,
+      "eccentricity": 0.01903228,
+      "perihelion": 344.831529,
+      "precession": -96.28317
     },
     {
       "year": -66000,
-      "obliquity": 24.164465,
-      "eccentricity": 0.01898321,
-      "perihelion": 348.14111,
-      "precession": -93.575459
+      "obliquity": 24.164457,
+      "eccentricity": 0.01898317,
+      "perihelion": 348.143424,
+      "precession": -93.573566
     },
     {
       "year": -64000,
-      "obliquity": 24.152066,
-      "eccentricity": 0.01893309,
-      "perihelion": 351.45675,
-      "precession": -90.863381
+      "obliquity": 24.152057,
+      "eccentricity": 0.01893305,
+      "perihelion": 351.458998,
+      "precession": -90.861542
     },
     {
       "year": -62000,
-      "obliquity": 24.138868,
-      "eccentricity": 0.01888195,
-      "perihelion": 354.77607,
-      "precession": -88.148881
+      "obliquity": 24.138859,
+      "eccentricity": 0.01888192,
+      "perihelion": 354.778252,
+      "precession": -88.147097
     },
     {
       "year": -60000,
-      "obliquity": 24.124895,
-      "eccentricity": 0.0188298,
-      "perihelion": 358.09907,
-      "precession": -85.431959
+      "obliquity": 24.124886,
+      "eccentricity": 0.01882977,
+      "perihelion": 358.101186,
+      "precession": -85.430229
     },
     {
       "year": -58000,
-      "obliquity": 24.110171,
-      "eccentricity": 0.01877664,
-      "perihelion": 1.42575,
-      "precession": -82.712614
+      "obliquity": 24.110162,
+      "eccentricity": 0.01877661,
+      "perihelion": 1.4278,
+      "precession": -82.710938
     },
     {
       "year": -56000,
-      "obliquity": 24.094721,
-      "eccentricity": 0.01872247,
-      "perihelion": 4.75611,
-      "precession": -79.990843
+      "obliquity": 24.094711,
+      "eccentricity": 0.01872243,
+      "perihelion": 4.758094,
+      "precession": -79.989222
     },
     {
       "year": -54000,
-      "obliquity": 24.078568,
-      "eccentricity": 0.01866728,
-      "perihelion": 8.09015,
-      "precession": -77.266647
+      "obliquity": 24.078559,
+      "eccentricity": 0.01866725,
+      "perihelion": 8.092068,
+      "precession": -77.26508
     },
     {
       "year": -52000,
-      "obliquity": 24.061738,
-      "eccentricity": 0.01861107,
-      "perihelion": 11.42787,
-      "precession": -74.540024
+      "obliquity": 24.061728,
+      "eccentricity": 0.01861104,
+      "perihelion": 11.429722,
+      "precession": -74.538512
     },
     {
       "year": -50000,
-      "obliquity": 24.044253,
-      "eccentricity": 0.01855386,
-      "perihelion": 14.76927,
-      "precession": -71.810973
+      "obliquity": 24.044243,
+      "eccentricity": 0.01855383,
+      "perihelion": 14.771055,
+      "precession": -71.809516
     },
     {
       "year": -48000,
-      "obliquity": 24.026138,
-      "eccentricity": 0.01849563,
-      "perihelion": 18.11435,
-      "precession": -69.079494
+      "obliquity": 24.026129,
+      "eccentricity": 0.0184956,
+      "perihelion": 18.116068,
+      "precession": -69.078091
     },
     {
       "year": -46000,
-      "obliquity": 24.007418,
-      "eccentricity": 0.01843639,
-      "perihelion": 21.46311,
-      "precession": -66.345584
+      "obliquity": 24.007409,
+      "eccentricity": 0.01843636,
+      "perihelion": 21.464761,
+      "precession": -66.344236
     },
     {
       "year": -44000,
-      "obliquity": 23.988116,
-      "eccentricity": 0.01837613,
-      "perihelion": 24.81555,
-      "precession": -63.609244
+      "obliquity": 23.988107,
+      "eccentricity": 0.0183761,
+      "perihelion": 24.817134,
+      "precession": -63.607951
     },
     {
       "year": -42000,
-      "obliquity": 23.968258,
-      "eccentricity": 0.01831486,
-      "perihelion": 28.17167,
-      "precession": -60.870471
+      "obliquity": 23.968248,
+      "eccentricity": 0.01831483,
+      "perihelion": 28.173187,
+      "precession": -60.869233
     },
     {
       "year": -40000,
-      "obliquity": 23.947865,
-      "eccentricity": 0.01825258,
-      "perihelion": 31.53147,
-      "precession": -58.129265
+      "obliquity": 23.947857,
+      "eccentricity": 0.01825255,
+      "perihelion": 31.53292,
+      "precession": -58.128082
     },
     {
       "year": -38000,
-      "obliquity": 23.926964,
-      "eccentricity": 0.01818928,
-      "perihelion": 34.89495,
-      "precession": -55.385625
+      "obliquity": 23.926956,
+      "eccentricity": 0.01818925,
+      "perihelion": 34.896332,
+      "precession": -55.384497
     },
     {
       "year": -36000,
-      "obliquity": 23.905579,
-      "eccentricity": 0.01812497,
-      "perihelion": 38.26211,
-      "precession": -52.639549
+      "obliquity": 23.90557,
+      "eccentricity": 0.01812494,
+      "perihelion": 38.263424,
+      "precession": -52.638477
     },
     {
       "year": -34000,
-      "obliquity": 23.883732,
-      "eccentricity": 0.01805964,
-      "perihelion": 41.63295,
-      "precession": -49.891038
+      "obliquity": 23.883724,
+      "eccentricity": 0.01805962,
+      "perihelion": 41.634197,
+      "precession": -49.890021
     },
     {
       "year": -32000,
-      "obliquity": 23.861449,
-      "eccentricity": 0.0179933,
-      "perihelion": 45.00747,
-      "precession": -47.140088
+      "obliquity": 23.861442,
+      "eccentricity": 0.01799328,
+      "perihelion": 45.008649,
+      "precession": -47.139128
     },
     {
       "year": -30000,
-      "obliquity": 23.838754,
-      "eccentricity": 0.01792595,
-      "perihelion": 48.38567,
-      "precession": -44.386701
+      "obliquity": 23.838747,
+      "eccentricity": 0.01792593,
+      "perihelion": 48.38678,
+      "precession": -44.385796
     },
     {
       "year": -28000,
-      "obliquity": 23.815671,
-      "eccentricity": 0.01785759,
-      "perihelion": 51.76755,
-      "precession": -41.630874
+      "obliquity": 23.815664,
+      "eccentricity": 0.01785756,
+      "perihelion": 51.768592,
+      "precession": -41.630024
     },
     {
       "year": -26000,
-      "obliquity": 23.792224,
-      "eccentricity": 0.01778821,
-      "perihelion": 55.15311,
-      "precession": -38.872606
+      "obliquity": 23.792217,
+      "eccentricity": 0.01778819,
+      "perihelion": 55.154084,
+      "precession": -38.871813
     },
     {
       "year": -24000,
-      "obliquity": 23.768437,
-      "eccentricity": 0.01771781,
-      "perihelion": 58.54235,
-      "precession": -36.111896
+      "obliquity": 23.768431,
+      "eccentricity": 0.01771779,
+      "perihelion": 58.543255,
+      "precession": -36.111159
     },
     {
       "year": -22000,
-      "obliquity": 23.744335,
-      "eccentricity": 0.01764641,
-      "perihelion": 61.93527,
-      "precession": -33.348744
+      "obliquity": 23.744329,
+      "eccentricity": 0.01764639,
+      "perihelion": 61.936106,
+      "precession": -33.348063
     },
     {
       "year": -20000,
-      "obliquity": 23.719941,
-      "eccentricity": 0.01757399,
-      "perihelion": 65.33187,
-      "precession": -30.583148
+      "obliquity": 23.719935,
+      "eccentricity": 0.01757397,
+      "perihelion": 65.332638,
+      "precession": -30.582523
     },
     {
       "year": -18000,
-      "obliquity": 23.69528,
-      "eccentricity": 0.01750055,
-      "perihelion": 68.73215,
-      "precession": -27.815108
+      "obliquity": 23.695275,
+      "eccentricity": 0.01750054,
+      "perihelion": 68.732849,
+      "precession": -27.814539
     },
     {
       "year": -16000,
-      "obliquity": 23.670376,
-      "eccentricity": 0.01742611,
-      "perihelion": 72.13611,
-      "precession": -25.044621
+      "obliquity": 23.670371,
+      "eccentricity": 0.01742609,
+      "perihelion": 72.136739,
+      "precession": -25.044109
     },
     {
       "year": -14000,
-      "obliquity": 23.645253,
-      "eccentricity": 0.01735065,
-      "perihelion": 75.54375,
-      "precession": -22.271687
+      "obliquity": 23.645249,
+      "eccentricity": 0.01735063,
+      "perihelion": 75.54431,
+      "precession": -22.271232
     },
     {
       "year": -12000,
-      "obliquity": 23.619935,
-      "eccentricity": 0.01727417,
-      "perihelion": 78.95507,
-      "precession": -19.496306
+      "obliquity": 23.619932,
+      "eccentricity": 0.01727416,
+      "perihelion": 78.955561,
+      "precession": -19.495906
     },
     {
       "year": -10000,
-      "obliquity": 23.594447,
-      "eccentricity": 0.01719668,
-      "perihelion": 82.37007,
-      "precession": -16.718475
+      "obliquity": 23.594444,
+      "eccentricity": 0.01719667,
+      "perihelion": 82.370491,
+      "precession": -16.718132
     },
     {
       "year": -8000,
-      "obliquity": 23.568813,
-      "eccentricity": 0.01711818,
-      "perihelion": 85.78875,
-      "precession": -13.938194
+      "obliquity": 23.56881,
+      "eccentricity": 0.01711817,
+      "perihelion": 85.789101,
+      "precession": -13.937908
     },
     {
       "year": -6000,
-      "obliquity": 23.543056,
-      "eccentricity": 0.01703867,
-      "perihelion": 89.21111,
-      "precession": -11.155462
+      "obliquity": 23.543054,
+      "eccentricity": 0.01703866,
+      "perihelion": 89.211391,
+      "precession": -11.155233
     },
     {
       "year": -4000,
-      "obliquity": 23.517201,
-      "eccentricity": 0.01695814,
-      "perihelion": 92.63715,
-      "precession": -8.370277
+      "obliquity": 23.5172,
+      "eccentricity": 0.01695813,
+      "perihelion": 92.637361,
+      "precession": -8.370106
     },
     {
       "year": -2000,
-      "obliquity": 23.491273,
-      "eccentricity": 0.0168766,
-      "perihelion": 96.06687,
-      "precession": -5.58264
+      "obliquity": 23.491272,
+      "eccentricity": 0.01687659,
+      "perihelion": 96.067011,
+      "precession": -5.582525
     },
     {
       "year": 0,
-      "obliquity": 23.465295,
-      "eccentricity": 0.01679404,
-      "perihelion": 99.50027,
-      "precession": -2.792548
+      "obliquity": 23.440591,
+      "eccentricity": 0.01671467,
+      "perihelion": 102.765413,
+      "precession": -0.139682
     },
     {
       "year": 2000,
@@ -374,346 +374,346 @@
     },
     {
       "year": 4000,
-      "obliquity": 23.413286,
+      "obliquity": 23.413287,
       "eccentricity": 0.01662589,
-      "perihelion": 106.37811,
-      "precession": 2.795004
+      "perihelion": 106.378039,
+      "precession": 2.794947
     },
     {
       "year": 6000,
-      "obliquity": 23.387304,
+      "obliquity": 23.387305,
       "eccentricity": 0.01654029,
-      "perihelion": 109.82255,
-      "precession": 5.592466
+      "perihelion": 109.822408,
+      "precession": 5.592351
     },
     {
       "year": 8000,
-      "obliquity": 23.361369,
+      "obliquity": 23.361371,
       "eccentricity": 0.01645368,
-      "perihelion": 113.27067,
-      "precession": 8.392386
+      "perihelion": 113.270457,
+      "precession": 8.392214
     },
     {
       "year": 10000,
-      "obliquity": 23.335505,
+      "obliquity": 23.335507,
       "eccentricity": 0.01636606,
-      "perihelion": 116.72247,
-      "precession": 11.194766
+      "perihelion": 116.722186,
+      "precession": 11.194536
     },
     {
       "year": 12000,
-      "obliquity": 23.309737,
-      "eccentricity": 0.01627742,
-      "perihelion": 120.17795,
-      "precession": 13.999607
+      "obliquity": 23.309739,
+      "eccentricity": 0.01627743,
+      "perihelion": 120.177595,
+      "precession": 13.999319
     },
     {
       "year": 14000,
-      "obliquity": 23.284088,
-      "eccentricity": 0.01618777,
-      "perihelion": 123.63711,
-      "precession": 16.80691
+      "obliquity": 23.284091,
+      "eccentricity": 0.01618778,
+      "perihelion": 123.636684,
+      "precession": 16.806564
     },
     {
       "year": 16000,
-      "obliquity": 23.258583,
-      "eccentricity": 0.0160971,
-      "perihelion": 127.09995,
-      "precession": 19.616675
+      "obliquity": 23.258586,
+      "eccentricity": 0.01609711,
+      "perihelion": 127.099452,
+      "precession": 19.616271
     },
     {
       "year": 18000,
-      "obliquity": 23.233245,
-      "eccentricity": 0.01600542,
-      "perihelion": 130.56647,
-      "precession": 22.428905
+      "obliquity": 23.233249,
+      "eccentricity": 0.01600544,
+      "perihelion": 130.5659,
+      "precession": 22.428442
     },
     {
       "year": 20000,
-      "obliquity": 23.2081,
-      "eccentricity": 0.01591273,
-      "perihelion": 134.03667,
-      "precession": 25.243599
+      "obliquity": 23.208105,
+      "eccentricity": 0.01591275,
+      "perihelion": 134.036028,
+      "precession": 25.243079
     },
     {
       "year": 22000,
-      "obliquity": 23.183171,
-      "eccentricity": 0.01581903,
-      "perihelion": 137.51055,
-      "precession": 28.06076
+      "obliquity": 23.183176,
+      "eccentricity": 0.01581904,
+      "perihelion": 137.509836,
+      "precession": 28.060181
     },
     {
       "year": 24000,
-      "obliquity": 23.158483,
-      "eccentricity": 0.01572431,
-      "perihelion": 140.98811,
-      "precession": 30.880387
+      "obliquity": 23.158488,
+      "eccentricity": 0.01572433,
+      "perihelion": 140.987324,
+      "precession": 30.87975
     },
     {
       "year": 26000,
-      "obliquity": 23.134059,
-      "eccentricity": 0.01562857,
-      "perihelion": 144.46935,
-      "precession": 33.702483
+      "obliquity": 23.134065,
+      "eccentricity": 0.0156286,
+      "perihelion": 144.468492,
+      "precession": 33.701788
     },
     {
       "year": 28000,
-      "obliquity": 23.109923,
-      "eccentricity": 0.01553183,
-      "perihelion": 147.95427,
-      "precession": 36.527049
+      "obliquity": 23.10993,
+      "eccentricity": 0.01553185,
+      "perihelion": 147.953339,
+      "precession": 36.526294
     },
     {
       "year": 30000,
-      "obliquity": 23.086101,
-      "eccentricity": 0.01543407,
-      "perihelion": 151.44287,
-      "precession": 39.354084
+      "obliquity": 23.086108,
+      "eccentricity": 0.0154341,
+      "perihelion": 151.441867,
+      "precession": 39.353271
     },
     {
       "year": 32000,
-      "obliquity": 23.062616,
-      "eccentricity": 0.01533529,
-      "perihelion": 154.93515,
-      "precession": 42.183591
+      "obliquity": 23.062623,
+      "eccentricity": 0.01533532,
+      "perihelion": 154.934074,
+      "precession": 42.182719
     },
     {
       "year": 34000,
-      "obliquity": 23.039492,
-      "eccentricity": 0.01523551,
-      "perihelion": 158.43111,
-      "precession": 45.01557
+      "obliquity": 23.0395,
+      "eccentricity": 0.01523554,
+      "perihelion": 158.429961,
+      "precession": 45.014639
     },
     {
       "year": 36000,
-      "obliquity": 23.016754,
-      "eccentricity": 0.01513471,
-      "perihelion": 161.93075,
-      "precession": 47.850023
+      "obliquity": 23.016762,
+      "eccentricity": 0.01513474,
+      "perihelion": 161.929528,
+      "precession": 47.849033
     },
     {
       "year": 38000,
-      "obliquity": 22.994425,
-      "eccentricity": 0.01503289,
-      "perihelion": 165.43407,
-      "precession": 50.686951
+      "obliquity": 22.994433,
+      "eccentricity": 0.01503293,
+      "perihelion": 165.432774,
+      "precession": 50.685902
     },
     {
       "year": 40000,
-      "obliquity": 22.97253,
-      "eccentricity": 0.01493006,
-      "perihelion": 168.94107,
-      "precession": 53.526354
+      "obliquity": 22.972539,
+      "eccentricity": 0.0149301,
+      "perihelion": 168.939701,
+      "precession": 53.525245
     },
     {
       "year": 42000,
-      "obliquity": 22.951093,
-      "eccentricity": 0.01482622,
-      "perihelion": 172.45175,
-      "precession": 56.368233
+      "obliquity": 22.951102,
+      "eccentricity": 0.01482626,
+      "perihelion": 172.450307,
+      "precession": 56.367066
     },
     {
       "year": 44000,
-      "obliquity": 22.930139,
-      "eccentricity": 0.01472137,
-      "perihelion": 175.96611,
-      "precession": 59.212591
+      "obliquity": 22.930147,
+      "eccentricity": 0.01472141,
+      "perihelion": 175.964594,
+      "precession": 59.211364
     },
     {
       "year": 46000,
-      "obliquity": 22.90969,
-      "eccentricity": 0.0146155,
-      "perihelion": 179.48415,
-      "precession": 62.059427
+      "obliquity": 22.909699,
+      "eccentricity": 0.01461555,
+      "perihelion": 179.48256,
+      "precession": 62.058141
     },
     {
       "year": 48000,
-      "obliquity": 22.889772,
-      "eccentricity": 0.01450862,
-      "perihelion": 183.00587,
-      "precession": 64.908744
+      "obliquity": 22.889781,
+      "eccentricity": 0.01450867,
+      "perihelion": 183.004206,
+      "precession": 64.907397
     },
     {
       "year": 50000,
-      "obliquity": 22.870409,
-      "eccentricity": 0.01440072,
-      "perihelion": 186.53127,
-      "precession": 67.760541
+      "obliquity": 22.870418,
+      "eccentricity": 0.01440077,
+      "perihelion": 186.529532,
+      "precession": 67.759135
     },
     {
       "year": 52000,
-      "obliquity": 22.851624,
-      "eccentricity": 0.01429181,
-      "perihelion": 190.06035,
-      "precession": 70.61482
+      "obliquity": 22.851634,
+      "eccentricity": 0.01429187,
+      "perihelion": 190.058537,
+      "precession": 70.613354
     },
     {
       "year": 54000,
-      "obliquity": 22.833443,
-      "eccentricity": 0.01418189,
-      "perihelion": 193.59311,
-      "precession": 73.471582
+      "obliquity": 22.833453,
+      "eccentricity": 0.01418195,
+      "perihelion": 193.591223,
+      "precession": 73.470056
     },
     {
       "year": 56000,
-      "obliquity": 22.815889,
-      "eccentricity": 0.01407095,
-      "perihelion": 197.12955,
-      "precession": 76.330829
+      "obliquity": 22.815898,
+      "eccentricity": 0.01407101,
+      "perihelion": 197.127588,
+      "precession": 76.329243
     },
     {
       "year": 58000,
-      "obliquity": 22.798986,
-      "eccentricity": 0.013959,
-      "perihelion": 200.66967,
-      "precession": 79.19256
+      "obliquity": 22.798996,
+      "eccentricity": 0.01395906,
+      "perihelion": 200.667634,
+      "precession": 79.190914
     },
     {
       "year": 60000,
-      "obliquity": 22.782759,
-      "eccentricity": 0.01384603,
-      "perihelion": 204.21347,
-      "precession": 82.056778
+      "obliquity": 22.782768,
+      "eccentricity": 0.0138461,
+      "perihelion": 204.211359,
+      "precession": 82.055072
     },
     {
       "year": 62000,
-      "obliquity": 22.767231,
-      "eccentricity": 0.01373206,
-      "perihelion": 207.76095,
-      "precession": 84.923483
+      "obliquity": 22.76724,
+      "eccentricity": 0.01373213,
+      "perihelion": 207.758764,
+      "precession": 84.921716
     },
     {
       "year": 64000,
-      "obliquity": 22.752427,
-      "eccentricity": 0.01361707,
-      "perihelion": 211.31211,
-      "precession": 87.792677
+      "obliquity": 22.752437,
+      "eccentricity": 0.01361714,
+      "perihelion": 211.309848,
+      "precession": 87.790849
     },
     {
       "year": 66000,
-      "obliquity": 22.738372,
-      "eccentricity": 0.01350106,
-      "perihelion": 214.86695,
-      "precession": 90.66436
+      "obliquity": 22.738381,
+      "eccentricity": 0.01350114,
+      "perihelion": 214.864613,
+      "precession": 90.662472
     },
     {
       "year": 68000,
-      "obliquity": 22.725088,
-      "eccentricity": 0.01338404,
-      "perihelion": 218.42547,
-      "precession": 93.538533
+      "obliquity": 22.725097,
+      "eccentricity": 0.01338412,
+      "perihelion": 218.423057,
+      "precession": 93.536585
     },
     {
       "year": 70000,
-      "obliquity": 22.712601,
-      "eccentricity": 0.01326601,
-      "perihelion": 221.98767,
-      "precession": 96.415198
+      "obliquity": 22.71261,
+      "eccentricity": 0.01326609,
+      "perihelion": 221.985182,
+      "precession": 96.413189
     },
     {
       "year": 72000,
-      "obliquity": 22.700935,
-      "eccentricity": 0.01314697,
-      "perihelion": 225.55355,
-      "precession": 99.294356
+      "obliquity": 22.700943,
+      "eccentricity": 0.01314705,
+      "perihelion": 225.550986,
+      "precession": 99.292286
     },
     {
       "year": 74000,
-      "obliquity": 22.690113,
-      "eccentricity": 0.01302691,
-      "perihelion": 229.12311,
-      "precession": 102.176007
+      "obliquity": 22.690121,
+      "eccentricity": 0.013027,
+      "perihelion": 229.12047,
+      "precession": 102.173876
     },
     {
       "year": 76000,
-      "obliquity": 22.680161,
-      "eccentricity": 0.01290583,
-      "perihelion": 232.69635,
-      "precession": 105.060153
+      "obliquity": 22.680168,
+      "eccentricity": 0.01290593,
+      "perihelion": 232.693634,
+      "precession": 105.057961
     },
     {
       "year": 78000,
-      "obliquity": 22.671101,
-      "eccentricity": 0.01278375,
-      "perihelion": 236.27327,
-      "precession": 107.946795
+      "obliquity": 22.671108,
+      "eccentricity": 0.01278384,
+      "perihelion": 236.270478,
+      "precession": 107.944542
     },
     {
       "year": 80000,
-      "obliquity": 22.662959,
-      "eccentricity": 0.01266065,
-      "perihelion": 239.85387,
-      "precession": 110.835934
+      "obliquity": 22.662965,
+      "eccentricity": 0.01266075,
+      "perihelion": 239.851001,
+      "precession": 110.833619
     },
     {
       "year": 82000,
-      "obliquity": 22.655758,
-      "eccentricity": 0.01253653,
-      "perihelion": 243.43815,
-      "precession": 113.727571
+      "obliquity": 22.655763,
+      "eccentricity": 0.01253664,
+      "perihelion": 243.435205,
+      "precession": 113.725194
     },
     {
       "year": 84000,
-      "obliquity": 22.649523,
-      "eccentricity": 0.01241141,
-      "perihelion": 247.02611,
-      "precession": 116.621706
+      "obliquity": 22.649527,
+      "eccentricity": 0.01241151,
+      "perihelion": 247.023088,
+      "precession": 116.619269
     },
     {
       "year": 86000,
-      "obliquity": 22.644277,
-      "eccentricity": 0.01228527,
-      "perihelion": 250.61775,
-      "precession": 119.518342
+      "obliquity": 22.644281,
+      "eccentricity": 0.01228537,
+      "perihelion": 250.614651,
+      "precession": 119.515843
     },
     {
       "year": 88000,
-      "obliquity": 22.640046,
-      "eccentricity": 0.01215811,
-      "perihelion": 254.21307,
-      "precession": 122.417479
+      "obliquity": 22.640049,
+      "eccentricity": 0.01215822,
+      "perihelion": 254.209894,
+      "precession": 122.414918
     },
     {
       "year": 90000,
-      "obliquity": 22.636852,
-      "eccentricity": 0.01202994,
-      "perihelion": 257.81207,
-      "precession": 125.319118
+      "obliquity": 22.636855,
+      "eccentricity": 0.01203006,
+      "perihelion": 257.808817,
+      "precession": 125.316495
     },
     {
       "year": 92000,
-      "obliquity": 22.634721,
-      "eccentricity": 0.01190076,
-      "perihelion": 261.41475,
-      "precession": 128.22326
+      "obliquity": 22.634723,
+      "eccentricity": 0.01190088,
+      "perihelion": 261.411419,
+      "precession": 128.220576
     },
     {
       "year": 94000,
       "obliquity": 22.633677,
-      "eccentricity": 0.01177057,
-      "perihelion": 265.02111,
-      "precession": 131.129907
+      "eccentricity": 0.01177069,
+      "perihelion": 265.017702,
+      "precession": 131.12716
     },
     {
       "year": 96000,
-      "obliquity": 22.633743,
-      "eccentricity": 0.01163936,
-      "perihelion": 268.63115,
-      "precession": 134.039059
+      "obliquity": 22.633742,
+      "eccentricity": 0.01163948,
+      "perihelion": 268.627664,
+      "precession": 134.03625
     },
     {
       "year": 98000,
-      "obliquity": 22.634944,
-      "eccentricity": 0.01150713,
-      "perihelion": 272.24487,
-      "precession": 136.950717
+      "obliquity": 22.634942,
+      "eccentricity": 0.01150727,
+      "perihelion": 272.241306,
+      "precession": 136.947846
     },
     {
       "year": 100000,
-      "obliquity": 22.637304,
-      "eccentricity": 0.0113739,
-      "perihelion": 275.86227,
-      "precession": 139.864883
+      "obliquity": 22.637301,
+      "eccentricity": 0.01137403,
+      "perihelion": 275.858628,
+      "precession": 139.86195
     }
   ]
 }

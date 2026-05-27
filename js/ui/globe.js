@@ -61,7 +61,7 @@ export function setupGlobeEvents(canvas) {
         setCurrentLng(lng);
         updateCoordsDisplay();
         updateMarkerPosition();
-        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
         generateAnalemma();
     }
 
@@ -86,7 +86,7 @@ export function setupGlobeEvents(canvas) {
                 setCurrentLng(latLng.lng);
                 updateCoordsDisplay();
                 updateMarkerPosition();
-                updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+                updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
                 generateAnalemma();
             }
             setPreviousMousePosition({ x: e.clientX, y: e.clientY });
@@ -161,7 +161,7 @@ export function setupGlobeEvents(canvas) {
                     setCurrentLng(latLng.lng);
                     updateCoordsDisplay();
                     updateMarkerPosition();
-                    updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+                    updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
                     generateAnalemma();
                 }
             } else if (state.isDragging) {

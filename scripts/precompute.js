@@ -5,9 +5,15 @@
 const fs = require('fs');
 const path = require('path');
 
+// 计算儒略千年数 (从 J2000.0 起算)
+function getJulianMillennia(year) {
+    const jd = Date.UTC(year, 0, 1, 12, 0, 0) / 86400000 + 2440587.5;
+    return (jd - 2451545.0) / 365250;
+}
+
 // 黄赤交角计算 (Laskar 1993)
 function getObliquity(year) {
-    const t = (year - 2000) / 1000; // 儒略千年数
+    const t = getJulianMillennia(year);
     let eps = 84381.448;
     eps += -46.8150 * t;
     eps += -0.00059 * t * t;
@@ -17,7 +23,7 @@ function getObliquity(year) {
 
 // 轨道偏心率
 function getEccentricity(year) {
-    const t = (year - 2000) / 1000;
+    const t = getJulianMillennia(year);
     let e = 0.0167086342;
     e += -0.000042037 * t;
     e += -0.0000001267 * t * t;
@@ -27,7 +33,7 @@ function getEccentricity(year) {
 
 // 近日点经度
 function getPerihelion(year) {
-    const t = (year - 2000) / 1000;
+    const t = getJulianMillennia(year);
     let varpi = 102.93735;
     varpi += 1.71946 * t;
     varpi += 0.00046 * t * t;
@@ -38,7 +44,7 @@ function getPerihelion(year) {
 
 // 岁差
 function getPrecession(year) {
-    const t = (year - 2000) / 1000;
+    const t = getJulianMillennia(year);
     const pA = 5028.796195 * t +
                1.1054348 * t * t +
                0.00007964 * t * t * t;

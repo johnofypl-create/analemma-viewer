@@ -1,5 +1,6 @@
 import { refs } from '../config.js';
 import { latLngToVector3 } from '../utils/math.js';
+import { getOrbitalParamsForYear } from '../data/orbital-loader.js';
 
 // ==================== 创建太阳模型 ====================
 export function createSunModel(earthGroup) {
@@ -60,13 +61,16 @@ export function createSunModel(earthGroup) {
 }
 
 // ==================== 更新太阳光照方向 (日下点算法) ====================
-export function updateSunLight(currentTimeMinutes, currentDayOfYear) {
+export function updateSunLight(currentTimeMinutes, currentDayOfYear, currentYear) {
     if (!refs.sunLight) return;
     const hours = Math.floor(currentTimeMinutes / 60);
     const minutes = currentTimeMinutes % 60;
     const doy = currentDayOfYear;
 
-    const decDeg = 23.44 * Math.sin(2 * Math.PI * (doy - 81) / 365);
+    const params = getOrbitalParamsForYear(currentYear);
+    const obliquity = params ? params.obliquity : 23.44;
+
+    const decDeg = obliquity * Math.sin(2 * Math.PI * (doy - 81) / 365);
     const B = (360 / 365) * (doy - 81) * Math.PI / 180;
     const eot = 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B);
     const utcDecimal = hours + minutes / 60;

@@ -64,7 +64,7 @@ function applyCoordUpdate(lat, lng) {
     setCurrentLng(lng);
     updateCoordsDisplay();
     updateMarkerPosition();
-    updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+    updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
     generateAnalemma();
 }
 

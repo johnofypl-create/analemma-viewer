@@ -60,7 +60,7 @@ export function initTimeControl() {
         const timeStr = minutesToTime(state.currentTimeMinutes);
         input.value = timeStr;
         updateSliderTrackFills();
-        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
         generateAnalemma();
     });
 
@@ -72,7 +72,7 @@ export function initTimeControl() {
             const timeStr = minutesToTime(minutes);
             input.value = timeStr;
             updateSliderTrackFills();
-            updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+            updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
             generateAnalemma();
         }
     });
@@ -94,7 +94,7 @@ export function initDateControl() {
         const dateStr = doyToDateLabel(state.currentDayOfYear, state.currentYear);
         label.textContent = dateStr;
         updateSliderTrackFills();
-        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
         generateAnalemma();
     });
 }
@@ -131,7 +131,7 @@ export async function initYearControl() {
         dateLabel.textContent = dateStr;
 
         updateSliderTrackFills();
-        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear);
+        updateSunLight(state.currentTimeMinutes, state.currentDayOfYear, state.currentYear);
         generateAnalemma();
     });
 }
