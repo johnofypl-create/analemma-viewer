@@ -1,5 +1,5 @@
 // ==================== 预计算脚本 ====================
-// 生成 -10000 到 +10000 年间每隔 200 年的轨道参数
+// 生成 -100000 到 +100000 年间每隔 2000 年的轨道参数
 // 运行: node scripts/precompute.js
 
 const fs = require('fs');
@@ -47,9 +47,9 @@ function getPrecession(year) {
 
 // ==================== 生成预计算数据 ====================
 function generatePrecomputedData() {
-    const startYear = -10000;
-    const endYear = 10000;
-    const step = 200;
+    const startYear = -100000;
+    const endYear = 100000;
+    const step = 2000;
 
     const data = [];
 
@@ -79,7 +79,7 @@ function generatePrecomputedData() {
 // ==================== 主程序 ====================
 function main() {
     console.log('Starting precomputation of orbital parameters...');
-    console.log('Range: -10000 to +10000, step: 200 years');
+    console.log('Range: -100000 to +100000, step: 2000 years');
 
     const result = generatePrecomputedData();
 
@@ -100,7 +100,7 @@ function main() {
 
     // 打印一些示例数据
     console.log('\nSample data points:');
-    const samples = [-10000, -8000, -6000, -4000, -2000, 0, 2000, 4000, 6000, 8000, 10000];
+    const samples = [-100000, -80000, -60000, -40000, -20000, 0, 20000, 40000, 60000, 80000, 100000];
     for (const year of samples) {
         const point = result.data.find(d => d.year === year);
         if (point) {
