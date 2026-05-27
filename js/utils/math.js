@@ -1,13 +1,14 @@
 // ==================== 经纬度转三维坐标 ====================
-// Three.js SphereGeometry: x=sin(phi)*sin(theta), y=cos(phi), z=sin(phi)*cos(theta)
-// theta=0 (+Z) 对应 lng=-180 (纹理左边缘)
+// Three.js SphereGeometry: x=-r*sin(phi)*cos(theta), y=r*cos(phi), z=r*sin(phi)*sin(theta)
+// theta=0 (-X轴) 对应 lng=-180 (纹理左边缘 u=0)
+// theta=π (+X轴) 对应 lng=0   (纹理中心 u=0.5)
 export function latLngToVector3(lat, lng, radius) {
     const phi = (90 - lat) * (Math.PI / 180);
     const theta = (lng + 180) * (Math.PI / 180);
 
-    const x = radius * Math.sin(phi) * Math.sin(theta);
+    const x = -radius * Math.sin(phi) * Math.cos(theta);
     const y = radius * Math.cos(phi);
-    const z = radius * Math.sin(phi) * Math.cos(theta);
+    const z = radius * Math.sin(phi) * Math.sin(theta);
 
     return new THREE.Vector3(x, y, z);
 }
@@ -17,7 +18,7 @@ export function vector3ToLatLng(vector) {
     const v = vector.clone().normalize();
     const lat = Math.asin(Math.max(-1, Math.min(1, v.y))) * 180 / Math.PI;
 
-    let rawTheta = Math.atan2(v.x, v.z);
+    let rawTheta = Math.atan2(v.z, -v.x);
     if (rawTheta < 0) rawTheta += 2 * Math.PI;
     const lng = rawTheta * 180 / Math.PI - 180;
 

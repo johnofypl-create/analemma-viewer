@@ -1,4 +1,5 @@
 import { refs } from '../config.js';
+import { latLngToVector3 } from '../utils/math.js';
 
 // ==================== 创建太阳模型 ====================
 export function createSunModel(earthGroup) {
@@ -79,15 +80,6 @@ export function updateSunLight(currentTimeMinutes, currentDayOfYear) {
     if (refs.sunMesh) {
         refs.sunMesh.position.copy(lightDir.clone().normalize().multiplyScalar(15));
     }
-}
-
-function latLngToVector3(lat, lng, radius) {
-    const phi = (90 - lat) * (Math.PI / 180);
-    const theta = (lng + 180) * (Math.PI / 180);
-    const x = radius * Math.sin(phi) * Math.sin(theta);
-    const y = radius * Math.cos(phi);
-    const z = radius * Math.sin(phi) * Math.cos(theta);
-    return new THREE.Vector3(x, y, z);
 }
 
 // ==================== 绘制镜头眩光 ====================
