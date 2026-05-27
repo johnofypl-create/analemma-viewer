@@ -108,6 +108,7 @@ export function interpolateOrbitalParams(params1, params2, year) {
 // 使用简化但足够精确的公式
 export function calculateSunFromParams(params, dayOfYear, timeMinutes, lat, lng) {
     const { obliquity, eccentricity, perihelion } = params;
+    const epsRad = obliquity * Math.PI / 180;
 
     // 一年中的角度 (0 - 2π)
     const dayAngle = (dayOfYear / 365.25) * 2 * Math.PI;
@@ -115,7 +116,7 @@ export function calculateSunFromParams(params, dayOfYear, timeMinutes, lat, lng)
     // 平近点角
     const M = dayAngle - (perihelion * Math.PI / 180);
 
-    // 开普勒方程求解偏近点角 (简化迭代)
+    // 开普勒方程求解偏近点角
     let E = M;
     for (let i = 0; i < 5; i++) {
         E = M + eccentricity * Math.sin(E);
@@ -130,27 +131,37 @@ export function calculateSunFromParams(params, dayOfYear, timeMinutes, lat, lng)
     // 太阳黄经
     const lambda = nu + (perihelion * Math.PI / 180);
 
-    // 时间修正 (方程 of time 的简化)
-    const hours = timeMinutes / 60;
-    const timeOffset = (hours - 12) * 15 * Math.PI / 180; // 每小时 15 度
-
-    // 时角
-    const lst = timeOffset + (lng * Math.PI / 180); // 本地恒星时简化
-
     // 太阳赤纬
-    const declination = Math.asin(Math.sin(obliquity * Math.PI / 180) * Math.sin(lambda));
+    const declination = Math.asin(Math.sin(epsRad) * Math.sin(lambda));
+
+    // 太阳赤经
+    const alpha = Math.atan2(Math.cos(epsRad) * Math.sin(lambda), Math.cos(lambda));
+
+    // 格林尼治恒星时 (GMST) at 0h UT
+    const daysSinceJ2000 = (params.year - 2000) * 365.25 + dayOfYear;
+    let GMST0 = (280.46061837 + 360.98564736629 * daysSinceJ2000) % 360;
+    if (GMST0 < 0) GMST0 += 360;
+
+    // GMST at the given UT time
+    const utHours = timeMinutes / 60;
+    let GMST = (GMST0 + utHours * 15.04106864) % 360;
+    if (GMST < 0) GMST += 360;
+
+    // 地方恒星时 + 时角
+    const LST = GMST * Math.PI / 180 + lng * Math.PI / 180;
+    const H = LST - alpha;
 
     // 高度角
     const latRad = lat * Math.PI / 180;
     const altitude = Math.asin(
         Math.sin(latRad) * Math.sin(declination) +
-        Math.cos(latRad) * Math.cos(declination) * Math.cos(lst)
+        Math.cos(latRad) * Math.cos(declination) * Math.cos(H)
     );
 
     // 方位角
     const azimuth = Math.atan2(
-        -Math.cos(declination) * Math.sin(lst),
-        Math.sin(declination) * Math.cos(latRad) - Math.cos(declination) * Math.sin(latRad) * Math.cos(lst)
+        -Math.cos(declination) * Math.sin(H),
+        Math.sin(declination) * Math.cos(latRad) - Math.cos(declination) * Math.sin(latRad) * Math.cos(H)
     );
 
     return {
