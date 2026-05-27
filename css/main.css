@@ -628,10 +628,115 @@ input[type="range"].year-slider::-moz-range-thumb {
     }
     .left-panel, .right-panel {
         width: 100%;
-        height: 50%;
     }
     .left-panel {
         border-right: none;
         border-bottom: 1px solid var(--border);
+        flex: 1;
+        min-height: 0;
+    }
+    .right-panel {
+        flex: 0 0 auto;
+        height: auto;
+        min-height: 200px;
+    }
+
+    /* ── Mobile Globe Overlay - Compact Spacing ── */
+    .globe-overlay {
+        padding: 8px 10px 10px;
+    }
+
+    .coords-display {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .coord-card {
+        padding: 4px 8px;
+    }
+
+    .coord-card .label {
+        font-size: 9px;
+    }
+
+    .coord-card .value {
+        font-size: 11px;
+    }
+
+    /* ── Mobile Controls - Tight Spacing ── */
+    .time-control,
+    .date-control,
+    .year-control {
+        margin-bottom: 6px;
+    }
+
+    .control-label {
+        margin-bottom: 3px;
+    }
+
+    .control-label span:first-child {
+        font-size: 9px;
+    }
+
+    .control-label .label-val {
+        font-size: 10px;
+    }
+
+    .slider-input-row {
+        gap: 6px;
+    }
+
+    input[type="range"] {
+        height: 3px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        width: 12px;
+        height: 12px;
+    }
+
+    .time-input, .date-label-display, .year-label-display {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+
+    .time-input { width: 52px; }
+    .date-label-display { width: 65px; }
+    .year-label-display { width: 42px; }
+
+    .tz-row, .mode-row {
+        font-size: 9px;
+        margin-top: 2px;
+    }
+
+    /* ── Mobile Right Panel - Compact ── */
+    .right-panel {
+        padding: 8px 10px 6px;
+    }
+
+    .stats-bar {
+        margin-top: 6px;
+    }
+
+    .stats-bar .stat {
+        padding: 4px 2px;
+    }
+
+    .stats-bar .stat-label {
+        font-size: 8px;
+    }
+
+    .stats-bar .stat-value {
+        font-size: 11px;
+    }
+
+    .legend {
+        margin-top: 4px;
+        gap: 8px;
+        font-size: 9px;
+    }
+
+    .footer-hint {
+        display: none;
     }
 }
