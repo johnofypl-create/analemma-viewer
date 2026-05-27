@@ -122,26 +122,28 @@ function drawDataPoints(ctx, padding, chartW, chartH) {
     }
 
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 1.5;
     ctx.beginPath();
 
-    let firstPoint = true;
-    for (const point of state.analemmaData) {
-        const x = padding.left + (point.azimuth / 360) * chartW;
-        const y = padding.top + chartH - (point.altitude / 90) * chartH;
+    const pts = state.analemmaData.map(p => ({
+        x: padding.left + (p.azimuth / 360) * chartW,
+        y: padding.top + chartH - (p.altitude / 90) * chartH
+    }));
 
-        if (firstPoint) {
-            ctx.moveTo(x, y);
-            firstPoint = false;
-        } else {
-            ctx.lineTo(x, y);
+    if (pts.length > 0) {
+        ctx.moveTo(pts[0].x, pts[0].y);
+        for (let i = 1; i < pts.length - 1; i++) {
+            const midX = (pts[i].x + pts[i + 1].x) / 2;
+            const midY = (pts[i].y + pts[i + 1].y) / 2;
+            ctx.quadraticCurveTo(pts[i].x, pts[i].y, midX, midY);
         }
+        ctx.lineTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
     }
     ctx.stroke();
 
-    for (const point of state.analemmaData) {
-        const x = padding.left + (point.azimuth / 360) * chartW;
-        const y = padding.top + chartH - (point.altitude / 90) * chartH;
+    for (let i = 0; i < state.analemmaData.length; i++) {
+        const point = state.analemmaData[i];
+        const { x, y } = pts[i];
 
         const isBelowHorizon = point.altitude < 0;
         const color = isBelowHorizon ? 'rgba(148, 163, 184, 0.4)' : getSeasonColor(point.month);
