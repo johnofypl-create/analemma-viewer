@@ -773,9 +773,8 @@ input[type="range"].year-slider::-moz-range-thumb {
         min-height: 0;
     }
     .right-panel {
-        flex: 0 0 auto;
-        height: auto;
-        min-height: 200px;
+        flex: 1 1 0;
+        min-height: 280px;
     }
 
     /* ── Mobile Globe Overlay - Compact Spacing ── */

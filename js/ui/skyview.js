@@ -6,12 +6,16 @@ export function drawSkyView() {
     const canvas = document.getElementById('skyCanvas');
     const ctx = canvas.getContext('2d');
     const container = canvas.parentElement;
+    const dpr = window.devicePixelRatio || 1;
 
-    canvas.width = container.clientWidth;
-    canvas.height = container.clientHeight;
+    const w = container.clientWidth;
+    const h = container.clientHeight;
 
-    const w = canvas.width;
-    const h = canvas.height;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const padding = { top: 40, right: 40, bottom: 60, left: 60 };
 
     const chartW = w - padding.left - padding.right;
