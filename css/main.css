@@ -277,7 +277,7 @@ body::before {
     position: absolute;
     left: 0;
     right: 0;
-    text-align: left;
+    text-align: right;
     padding: 2px 14px;
     font-family: 'Share Tech Mono', 'Courier New', monospace;
     font-size: 13px;
@@ -312,18 +312,37 @@ body::before {
 
 .coord-card.scroll-mode .adj-val.adj-above-1,
 .coord-card.scroll-mode .adj-val.adj-below-1 {
-    opacity: 0.25;
+    opacity: 0.4;
     transform: translateY(0);
 }
 .coord-card.scroll-mode .adj-val.adj-above-2,
 .coord-card.scroll-mode .adj-val.adj-below-2 {
-    opacity: 0.08;
+    opacity: 0.15;
     transform: translateY(0);
 }
 
 /* ── Mobile Scroll Feedback ── */
 .coord-card.scroll-stepping {
     transition: none;
+}
+
+/* ── Slide Animation (step stepping) ── */
+.coord-card.slide-up .value {
+    animation: slideValueUp 0.25s ease;
+}
+
+.coord-card.slide-down .value {
+    animation: slideValueDown 0.25s ease;
+}
+
+@keyframes slideValueUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideValueDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 .coord-card.scroll-stepping .value {
