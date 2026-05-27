@@ -48,45 +48,27 @@
                         </div>
                         
                         <div class="time-control">
-                            <div class="control-label">
-                                <span>时刻选择 (UTC时间)</span>
-                                <span class="label-val" id="timeLabelVal">12:00 UTC</span>
-                            </div>
                             <div class="slider-input-row">
+                                <span class="control-label-text">时刻选择 (UTC时间)</span>
                                 <input type="range" class="time-slider" id="timeSlider" min="0" max="1439" value="720">
                                 <input type="text" class="time-input" id="timeInput" value="12:00">
                             </div>
                         </div>
                         
                         <div class="date-control">
-                            <div class="control-label">
-                                <span>日期选择</span>
-                                <span class="label-val" id="dateLabelVal">1月1日</span>
-                            </div>
                             <div class="slider-input-row">
+                                <span class="control-label-text">日期选择</span>
                                 <input type="range" class="date-slider" id="dateSlider" min="0" max="365">
                                 <span class="date-label-display" id="dateLabel">1月1日</span>
                             </div>
                         </div>
                         
                         <div class="year-control">
-                            <div class="control-label">
-                                <span>年份选择</span>
-                                <span class="label-val" id="yearLabelVal">2024年</span>
-                            </div>
                             <div class="slider-input-row">
+                                <span class="control-label-text">年份选择</span>
                                 <input type="range" class="year-slider" id="yearSlider" min="-100000" max="100000" value="2024" step="1">
                                 <span class="year-label-display" id="yearLabel">2024</span>
                             </div>
-                        </div>
-                        <div class="mode-row">
-                            <span>算法</span>
-                            <span class="mode-val" id="calcModeIndicator">VSOP87</span>
-                        </div>
-                        
-                        <div class="tz-row">
-                            <span>时区</span>
-                            <span class="tz-val" id="timezoneDisplay">UTC+8</span>
                         </div>
                         
                     </div>
@@ -127,6 +109,10 @@
                     <div class="stat">
                         <span class="stat-label">当地时间:</span>
                         <span class="stat-value" id="localTime">--</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">时区:</span>
+                        <span class="stat-value" id="timezoneDisplay">UTC+8</span>
                     </div>
                 </div>
                 

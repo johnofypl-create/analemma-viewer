@@ -353,31 +353,20 @@ body::before {
 .time-control { margin-bottom: 12px; }
 .date-control { margin-bottom: 12px; }
 
-.control-label {
+.slider-input-row {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 7px;
+    align-items: center;
+    gap: 8px;
 }
 
-.control-label span:first-child {
+.control-label-text {
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--muted);
-}
-
-.control-label .label-val {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 12px;
-    color: var(--gold);
-}
-
-.slider-input-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* Custom Range Sliders */
@@ -477,36 +466,6 @@ input[type="range"].year-slider::-moz-range-thumb {
 .time-input:focus, .time-input:hover {
     border-color: var(--border-glow);
     outline: none;
-}
-
-.tz-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-}
-
-.tz-row .tz-val {
-    font-family: 'Share Tech Mono', monospace;
-    color: var(--text);
-}
-
-.mode-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-    margin-top: 4px;
-}
-
-.mode-row .mode-val {
-    font-family: 'Share Tech Mono', monospace;
-    color: var(--emerald);
-    font-weight: 600;
 }
 
 /* ── Right Panel ── */
@@ -830,16 +789,8 @@ input[type="range"].year-slider::-moz-range-thumb {
         margin-bottom: 6px;
     }
 
-    .control-label {
-        margin-bottom: 3px;
-    }
-
-    .control-label span:first-child {
+    .control-label-text {
         font-size: 9px;
-    }
-
-    .control-label .label-val {
-        font-size: 10px;
     }
 
     .slider-input-row {
@@ -863,11 +814,6 @@ input[type="range"].year-slider::-moz-range-thumb {
     .time-input { width: 52px; }
     .date-label-display { width: 65px; }
     .year-label-display { width: 42px; }
-
-    .tz-row, .mode-row {
-        font-size: 9px;
-        margin-top: 2px;
-    }
 
     /* ── Mobile Right Panel - Compact ── */
     .right-panel {

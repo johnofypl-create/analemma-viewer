@@ -3,7 +3,7 @@ import { calculateSunData } from './suncalc.js';
 import { generateAnalemmaFromParams, calculateSunFromParams } from './vsop87.js';
 import { getOrbitalParamsForYear } from './orbital-loader.js';
 import { doyToDateLabel } from '../utils/math.js';
-import { getLocalTimeStr } from '../utils/time.js';
+import { getLocalTimeStr, getTimezoneStr } from '../utils/time.js';
 import { drawSkyView } from '../ui/skyview.js';
 
 // ==================== 是否使用 VSOP87 模式 ====================
@@ -86,11 +86,5 @@ export function updateStats() {
 
     const localTimeStr = getLocalTimeStr(state.currentTimeMinutes, state.currentLng);
     document.getElementById('localTime').textContent = localTimeStr;
-
-    // 显示当前使用的算法模式
-    const modeIndicator = document.getElementById('calcModeIndicator');
-    if (modeIndicator) {
-        modeIndicator.textContent = useVSOP87 ? 'VSOP87' : 'SunCalc';
-        modeIndicator.style.color = useVSOP87 ? '#3cb878' : '#4ea8f6';
-    }
+    document.getElementById('timezoneDisplay').textContent = getTimezoneStr(state.currentLng);
 }
